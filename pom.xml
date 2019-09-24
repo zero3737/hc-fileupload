@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>top.zero3737</groupId>
-  <artifactId>test</artifactId>
+  <artifactId>hcxx-fileupload</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 

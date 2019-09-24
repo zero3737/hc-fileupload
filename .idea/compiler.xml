@@ -11,6 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hcxx-fileupload" target="1.7" />
+      <module name="hcxx-fileupload (1)" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
