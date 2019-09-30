@@ -28,12 +28,15 @@ public class FileUploadController {
 
         //设置请求头
         HttpHeaders headers = new HttpHeaders();
+        // 设置发送数据类型为 form-data 类型
         MediaType type = MediaType.parseMediaType("multipart/form-data");
         headers.setContentType(type);
+        //添加 Cookie
         headers.set("Cookie", "classify=9; PHPSESSID=isnbovacds33r40b8fmmmqt6v3; theme=red; user_id=4; language=0; user_type=admin");
 
         //设置请求体，注意是LinkedMultiValueMap
         MultiValueMap<String, Object> form = new LinkedMultiValueMap<>();
+        // 填充数据
         for(String key : params.keySet()){
 
             form.add(key, params.get(key));
@@ -42,7 +45,7 @@ public class FileUploadController {
         for (final MultipartFile file : files) {
 
             try {
-
+                // 将 MultipartFile 类型封装成 ByteArrayResource 类型，以至于可以使用 RestTemplate 发送文件类型
                 ByteArrayResource fileAsResource = new ByteArrayResource(file.getBytes()) {
 
                     @Override
